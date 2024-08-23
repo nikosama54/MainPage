@@ -1,0 +1,169 @@
+
+
+.background {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    scroll-snap-align: start;
+}
+
+.background-image-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: start;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.titleFirts{
+    font-size: 60px;
+    line-height: 60px;
+}
+.titleFirsth3{
+    font-size: 40px;
+}
+
+.descriptionfirts{
+    font-size: 19px;
+}
+.logo-container {
+    display: flex;
+    justify-content: center;
+    width: 40em;
+    margin-top: 20%;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;    
+}
+.buttonHome {
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Estilos específicos para el botón azul */
+.blue-button {
+    background-color: #3498db;
+    color: white;
+}
+
+.blue-button:hover {
+    background-color: #2980b9;
+}
+
+.blue-button:active {
+    background-color: #1f618d;
+}
+
+/* Estilos específicos para el botón blanco */
+.white-button {
+    background-color: white;
+    color: #3498db;
+    border: 2px solid #3498db;
+}
+
+.white-button:hover {
+    background-color: #f86179;
+    color: white;
+}
+
+.white-button:active {
+    background-color: #e0e0e0;
+}
+.secondContainer{
+    margin-top: 8% !important;
+    color: black;
+}
+
+
+
+
+.boxTextSecond {
+    text-align: start;
+
+}
+
+.boxDescriptionSecond {
+    padding-right: 14%;
+    text-align: justify;
+}
+
+.boxDescriptionsIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+
+    padding: 0px 10px;
+
+}
+
+.boxIconsContainers {
+    position: relative;
+    width: 5em;
+    height: 5em;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+}
+
+.boxIMG1 {
+    background-image: url('/assets/img/rombomenu1.png');
+}
+
+.boxIMG2 {
+    background-image: url('/assets/img/rombomenu2.png');
+}
+
+.boxIMG3 {
+    background-image: url('/assets/img/rombomenu3.png');
+}
+
+.icono-centro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Centra el ícono horizontal y verticalmente */
+    font-size: 2em;
+    /* Tamaño del ícono */
+    color: white;
+    /* Color del ícono (ajústalo según el fondo) */
+}
+
+.whatsappIMG {
+    width: 20px;
+    height: 20px;
+}
+
+
+
