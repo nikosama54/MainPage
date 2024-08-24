@@ -1,36 +1,40 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { CommonModule } from '@angular/common';
+import {MatStepperModule} from '@angular/material/stepper';
+import { FormBuilder, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+
+
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent,CommonModule],
+  imports: [
+    HeaderComponent,
+    CommonModule,
+    MatStepperModule,    
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatIconModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  isVisible: boolean = false;
+  private _formBuilder = inject(FormBuilder);
 
-  
-isShow:boolean=false
-topPosTostartShowing:number=100
-@HostListener('window:scroll')checkScroll(){
-const scrollPosition= document.documentElement.scrollTop || document.body.scrollTop || 0
-
-console.log('[scroll]',scrollPosition)
-}
-
-goPosition(){
-  window.scroll({
-    top:930,
-    left:0,
-    behavior:'smooth'
-  })
-  this.toggleContent()
-}
-toggleContent(): void {
-  this.isVisible = !this.isVisible;
-}
+  firstFormGroup = this._formBuilder.group({
+    firstCtrl: ['', Validators.required],
+  });
+  secondFormGroup = this._formBuilder.group({
+    secondCtrl: ['', Validators.required],
+  });
+  isLinear = false;
 
 }
  
